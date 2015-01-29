@@ -22,11 +22,7 @@
 	<div class="container">
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
-		<div class="jumbotron">
-			<h1>Michael Bernstein</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
-		</div>
-
+		{{> jumbotron}}
 
 		<h4>Projects</h4>
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
@@ -39,12 +35,7 @@
 	    </ol>
 
 	    {{#each projects}}
-	      <div class="project" id="{{id}}">
-			  <a href="project/{{name}}" class="thumbnail">
-	          <img src="images/{{image}}" ... />
-	          <p>{{name}}</p>
-	        </a>
-	      </div>
+			{{> project}}
 	    {{/each}}
 
 	</div>
